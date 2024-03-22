@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
         else{
             // vulnerable code
             Logger logger = LogManager.getLogger(this.logger);
-            logger.error("Wrong login/password for user");
+            logger.error("Wrong login/password for user " + userName);
         }
     }
 }
