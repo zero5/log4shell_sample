@@ -28,7 +28,9 @@ public class LoginServlet extends HttpServlet {
             out.println("Welcome Back Admin");
         }
         else{
-            out.println("Wrong login/password for user");
+            // vulnerable code
+            Logger logger = LogManager.getLogger(this.logger);
+            logger.error("Wrong login/password for user");
         }
     }
 }
